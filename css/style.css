@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Resetaei as configurações padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+/*Aqui ficam as váriaveis*/
+:root {
+    --bege: #e2dbbe;
+    --rosa: #ee7674;
+    --lilas: #7e78d2;
+    --roxo: #2c0e37;
+    --preto: #08090a;
+}
+
+
+html {
+    width:100%;
+    height: 100vh;
+}
+
+body {
+    background: var(--preto);
+    color: var(--bege);
+}
+
+/*Configurações de títulos e parágrafos*/
+h1 {
+    color: var(--bege);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    padding: 2rem;
+    color: var(--bege);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+h3 {
+    padding: 1rem;
+    color: var(--bege);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    padding: 0.5rem 0;
+}
+
+/* Definindo as configurações do Flexbox */
+.flex {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#header_content {
+    height: 80px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: var(--lilas);
+    border-bottom: 1px solid var(--roxo);
+}
+
+#menu li {
+    display: inline;
+    padding: 1rem;
+ }
+ 
+ #menu li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 20px;
+ }
+ 
+ #menu li a:hover {
+    color: var(--purple-200);
+    text-decoration: underline;
+ }
+
+/* Configurações do 'Sobre Laísa' */
+#about{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 90%;
+    
+ }
+
+#conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1300px; 
+    gap: 50px;
+    width: 100%;
+
+}
+
+.img_profile{
+    width: 400px;
+}
+
+#sobre_texto {
+    flex: 1; 
+    text-align: justify;
+    padding: 0 1rem; 
+}
+
+/* Estilização da Seção Video */
+#video {
+    display: flex; 
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 90%;
+    align-items: flex-start; 
+}
+
+.youtube {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0.25rem 0; /* Reduzido o padding para ficar mais fino */
+    background-color: var(--lilas);
+    font-weight: bold;
+    text-align: center;
+}
+
+footer{
+    flex-direction: column;
+    margin: 0;
+    padding: 2rem;
+    color: var(--bege);
+    background-color: var(--lilas);
+    font-weight: bold;
+    text-align: center;
+}
+
+#redes_sociais {
+    display: flex;
+    justify-content: space-evenly; 
+    margin: 1rem 0 0 0;
+    width: 320px;
+}
+
+.social_icon {
+    width: 4rem;
+    height: 4rem;
+    filter: brightness(0) 
+            saturate(100%) 
+            invert(100%) 
+            sepia(0%) 
+            saturate(7457%) 
+            hue-rotate(23deg) 
+            brightness(95%) 
+            contrast(87%);
+}
+
+.social_icon:hover {  
+    filter: brightness(0) 
+            saturate(100%) 
+            invert(65%) 
+            sepia(59%) 
+            saturate(2437%) 
+            hue-rotate(213deg) 
+            brightness(86%) 
+            contrast(88%);
+}
+
+/*Página de Contato*/
+ 
+#contact{
+    flex-direction: row;
+    gap: 2rem;
+ }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: none;
+}
+
+form label {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+form input,
+textarea {
+    margin: 0.5rem 0 1rem;
+    padding: 0.5rem;
+    border-radius: 1.25rem;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    height: 5rem;
+}
+
+form span{
+    margin: 0 0 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: red;
+}
+
+form button {
+    text-align: center;
+    padding: 0.75rem 2rem;
+    background: var(--purple-800);
+    border: 1px solid var(--purple-500);
+    color: var(--white);
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background: var(--purple-500);
+}
+
+/* Estilização do Mapa */
+#mapa{
+    width: 480px;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#endereco > p{
+    font-size: 1rem;
+    text-align: justify;
+    font-weight: 600;
+}
