@@ -198,7 +198,7 @@ footer{
 
 /*Página de Contato*/
  
-#contact{
+#contato{
     flex-direction: row;
     gap: 2rem;
  }
